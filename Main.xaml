@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1240,1716</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1240,1836</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="98">
@@ -116,7 +116,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="554,1531" sap2010:WorkflowViewState.IdRef="Sequence_42">
+  <Sequence sap:VirtualizedContainerService.HintSize="554,1651" sap2010:WorkflowViewState.IdRef="Sequence_42">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_relatoio" />
     </Sequence.Variables>
@@ -225,9 +225,12 @@
     </ui:RetryScope>
     <ui:SendExchangeMail Bcc="{x:Null}" Cc="{x:Null}" EmailAutodiscover="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" ApplicationId="2abead93-2925-4927-a0d2-bb0c948f8808" AuthenticationMode="UserNameAndPassword" Body="Olá, Envio em anexo os relatórios solicitados." DirectoryId="3223964c-6e1f-48ba-b705-423351281a8c" DisplayName="Send Exchange Mail Message" Domain="sicredi.com.br" ExchangeVersion="Exchange2013_SP1" From="admgrupos_noreply@sicredi.com.br" sap:VirtualizedContainerService.HintSize="492,149" sap2010:WorkflowViewState.IdRef="SendExchangeMail_1" IsBodyHtml="True" IsDraft="False" Password="Ci15ro04an99%" SaveCopy="False" Server="[“https://outlook.office365.com/EWS/Exchange.asmx”]" Subject="Relatório Anexo Termos" To="andrade_cicero@sicredi.com.br;borges_gabriel@sicredi.com.br" User="app_consorcios_login@sicredi.com.br">
       <ui:SendExchangeMail.Files>
-        <InArgument x:TypeArguments="x:String">dt_relatoio.csv</InArgument>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String">dt_relatoio.csv</Literal>
+        </InArgument>
       </ui:SendExchangeMail.Files>
     </ui:SendExchangeMail>
+    <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="492,80" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="dt_relatoio.csv" />
     <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Controle de Acesso" sap:VirtualizedContainerService.HintSize="492,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="0cdfb54f-6cdf-44b4-91ad-c25d0d9f7f53" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
